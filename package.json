@@ -1,0 +1,11 @@
+{
+    "name": "webrole-sinalizacao",
+    "version": "1.0.0",
+    "main": "sinalizacao.js",
+    "scripts": {
+      "start": "node sinalizacao.js"
+    },
+    "dependencies": {
+      "ws": "^8.13.0"
+    }
+}

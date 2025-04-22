@@ -1,6 +1,9 @@
-// sinalizacao.js
 const WebSocket = require("ws");
-const wss = new WebSocket.Server({ port: 3000 });
+
+// Usa a porta fornecida pela Render, ou 3000 localmente
+const PORT = process.env.PORT || 3000;
+
+const wss = new WebSocket.Server({ port: PORT });
 
 wss.on("connection", (ws) => {
   ws.on("message", (message) => {
@@ -12,3 +15,5 @@ wss.on("connection", (ws) => {
     });
   });
 });
+
+console.log(`Servidor WebSocket rodando na porta ${PORT}`);
