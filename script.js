@@ -10,7 +10,7 @@ let isMicMuted = false;
 const id = Math.floor(Math.random() * 10000).toString();
 
 // WebSocket para sinalização
-const signalingServer = new WebSocket("wss://SEU_SERVIDOR_SIGNALIZACAO");
+const signalingServer = new WebSocket("wss://webrole.onrender.com");
 
 signalingServer.onopen = () => {
   signalingServer.send(JSON.stringify({ type: "join", from: id }));
